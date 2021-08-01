@@ -152,4 +152,4 @@ MoGuDing-Auto
 2. 点击点[SendKey](https://sct.ftqq.com/sendkey) ，生成一个 Key。将其增加到 Github Secrets 中，变量名为 `SERVERPUSHKEY`
 3. [配置消息通道](https://sct.ftqq.com/forward) ，选择方糖服务号，保存即可。
 4. 推送效果展示
-   <img src="docs/IMG/ysxg1.jpg" style="zoom:33%;" /> <img src="docs/IMG/ysxg2.jpg" style="zoom:33%;" /> <img src="docs/IMG/ysxg3.jpg" style="zoom:33%;" />
+   <img src="docs/IMG/ysxg.jpg" style="zoom:33%;" />
