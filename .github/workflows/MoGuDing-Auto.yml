@@ -3,7 +3,7 @@ name: MoGuDing-Auto
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'
+    - cron: '20 0,10 * * *'
     # cron表达式，Actions时区是UTC时间，需要往前推8个小时  此时为6点30推送
 
 jobs:
