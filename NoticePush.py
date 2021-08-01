@@ -3,7 +3,6 @@ import json
 import GlobalVariable
 import markdown
 
-
 # Server酱推送
 def server_push(text, desp):
     if not GlobalVariable.SERVERPUSHKEY:
@@ -66,13 +65,9 @@ def telegram_bot(title, content):
     else:
         print("telegram推送失败!")
 
-
-
-
-
 # 企业微信推送
 def enterprise_wechat(title, content):
-    # html = markdown.markdown(content)
+    html = markdown.markdown(content)
     access_token = ""
     if not GlobalVariable.ACCESSTOKEN:
         if not GlobalVariable.CORPID or not GlobalVariable.CORPSECRET or not GlobalVariable.TOUSER or not GlobalVariable.AGENTID:
@@ -113,7 +108,7 @@ def enterprise_wechat(title, content):
                     "thumb_media_id" : GlobalVariable.THUMB_MEDIA_ID ,
                     "author" : GlobalVariable.AUTHOR ,
                     "content_source_url": "",
-                    "content" : content,
+                    "content" : html,
                     "digest": content
                     }
                     ]
