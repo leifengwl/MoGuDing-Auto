@@ -1,0 +1,40 @@
+name: MoGuDing-Auto
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 22 * * *'
+    # cron表达式，Actions时区是UTC时间，需要往前推8个小时  此时为6点30推送
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run JDRouterPush
+      env:
+          PERSONAL_INFORMATION: ${{ secrets.PERSONAL_INFORMATION }}
+          SERVERPUSHKEY: ${{ secrets.SERVERPUSHKEY }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK: ${{ secrets.BARK }}
+          PUSHPLUS: ${{ secrets.PUSHPLUS }}
+          ACCESSTOKEN: ${{ secrets.ACCESSTOKEN }}
+          CORPID: ${{ secrets.CORPID }}
+          CORPSECRET: ${{ secrets.CORPSECRET }}
+          TOUSER: ${{ secrets.TOUSER }}
+          AGENTID: ${{ secrets.AGENTID }}
+          THUMB_MEDIA_ID: ${{ secrets.THUMB_MEDIA_ID }}
+          AUTHOR: ${{ secrets.AUTHOR }}
+      run: |
+        python MoGuDing.py
