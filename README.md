@@ -104,6 +104,10 @@ MoGuDing-Auto
 ]
 ```
 
+经纬度查询推荐使用高德：https://lbs.amap.com/tools/picker
+
+
+
 ## 为什么需要token？
 
 ### 区别：
@@ -124,13 +128,10 @@ MoGuDing-Auto
 
 ```yml
   schedule:
-    - cron: '30 22 * * *'
-    # cron表达式，Actions时区是UTC时间，需要往前推8个小时  此时为6点30推送
+    - cron: '30 0 * * *'
+    # cron表达式，Actions时区是UTC时间，需要往前推8个小时  此时为8点30推送
     # 示例： 每天晚上22点30执行 '30 14 * * *'
 ```
-
-*如果收到了 GitHub Action 的错误邮件，请检查 WSKEY是不是失效了，如果退出或重登都会导致京东云无线宝 `WSKEY` 失效*
-
 
 ## 订阅通知
 
