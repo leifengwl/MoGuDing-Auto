@@ -1,11 +1,9 @@
 import datetime
 import json
-
 import pytz
 import requests
 import urllib3
 import NoticePush
-import SignUtils
 import GlobalVariable
 
 urllib3.disable_warnings()
