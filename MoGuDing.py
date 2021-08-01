@@ -196,6 +196,8 @@ def signIn(type):
         "device": "Android",
         "planId": INFORMATION["planId"],
         "type": typeStr,
+        "latitude": INFORMATION["latitude"],
+        "longitude": INFORMATION["longitude"]
     }
 
     sign = getSign("getClockInSign",parameterSign)
