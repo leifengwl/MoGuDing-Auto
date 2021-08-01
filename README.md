@@ -124,7 +124,7 @@ MoGuDing-Auto
 
 ![图示](docs/IMG/actions.jpg)
 
-如果需要修改每日任务执行的时间，请修改 `.github/workflows/JDPush.yml`，在第 7行左右位置找到下如下配置。
+如果需要修改每日任务执行的时间，请修改 `.github/workflows/MoGuDing-Auto.yml`，在第 7行左右位置找到下如下配置。
 
 ```yml
   schedule:
