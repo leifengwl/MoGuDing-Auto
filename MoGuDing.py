@@ -42,7 +42,7 @@ def login():
         return
 
     data = responseJson["data"]
-    print(data)
+    #print(data)
     nikeName = data["nikeName"]
     userId = data["userId"]
     token = data["token"]
