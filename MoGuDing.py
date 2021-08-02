@@ -163,13 +163,18 @@ def getPlanByStu():
 
 # 获取sign
 def getSign(url,parameter):
-    response = requests.post(url=GlobalVariable.SIGN_URL + url,headers=GlobalVariable.headers, data=json.dumps(parameter))
-    responseJson = response.json()
-    if responseJson["code"] == 200 :
-        return responseJson["sign"]
-    else:
-        print(responseJson["msg"])
-        return None
+    global MESSAGE
+    try:
+        response = requests.post(url=GlobalVariable.SIGN_URL + url,headers=GlobalVariable.headers, data=json.dumps(parameter))
+        responseJson = response.json()
+        if responseJson["code"] == 200 :
+            return responseJson["sign"]
+        else:
+            MESSAGE += "\n%s" % responseJson["msg"]
+            print(responseJson["msg"])
+            return None
+    except Exception as e:
+        MESSAGE += "\nAPI访问出错！"
 
 
 # 上下班打卡签到
