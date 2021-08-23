@@ -13,12 +13,13 @@ WEB版本：[点击进入](http://www.lftools.ltd/)
 
 ## WEB版展示
 WEB版基于Pear-Admin-Boot编写
-<img src="docs/IMG/web1.jpg" style="zoom:33%;" />
-<img src="docs/IMG/web2.jpg" style="zoom:33%;" />
-<img src="docs/IMG/web3.jpg" style="zoom:33%;" />
-<img src="docs/IMG/web4.jpg" style="zoom:33%;" />
-<img src="docs/IMG/web5.jpg" style="zoom:33%;" />
-<img src="docs/IMG/web6.jpg" style="zoom:33%;" />
+
+<img src="docs/IMG/web1.png" style="zoom:33%;" />
+<img src="docs/IMG/web2.png" style="zoom:33%;" />
+<img src="docs/IMG/web3.png" style="zoom:33%;" />
+<img src="docs/IMG/web4.png" style="zoom:33%;" />
+<img src="docs/IMG/web5.png" style="zoom:33%;" />
+<img src="docs/IMG/web6.png" style="zoom:33%;" />
 
 
 
