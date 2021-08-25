@@ -20,8 +20,10 @@ WEB版基于Pear-Admin-Boot编写
 <img src="docs/IMG/web4.png" style="zoom:33%;" />
 <img src="docs/IMG/web5.png" style="zoom:33%;" />
 <img src="docs/IMG/web6.png" style="zoom:33%;" />
+
 微信交流群:
-<img src="docs/IMG/mmqrcode1629870388072.png" style="zoom:33%;" />
+
+<img src="https://img02.sogoucdn.com/app/a/100540022/2021082514141868894729.png" style="zoom:33%;" />
 
 
 
