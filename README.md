@@ -20,6 +20,7 @@ WEB版基于Pear-Admin-Boot编写
 <img src="docs/IMG/web4.png" style="zoom:33%;" />
 <img src="docs/IMG/web5.png" style="zoom:33%;" />
 <img src="docs/IMG/web6.png" style="zoom:33%;" />
+微信交流群:
 <img src="docs/IMG/mmqrcode1629870388072.png" style="zoom:33%;" />
 
 
