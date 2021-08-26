@@ -12,11 +12,11 @@ INFORMATION = {}
 MESSAGE = ""
 TITLE = ""
 UPDATE_INFO = ""
-
+FAILURES_Count = 0
 
 # 登录
 def login():
-    global MESSAGE
+    global MESSAGE,FAILURES_Count
     if INFORMATION.get("phone") is None or INFORMATION.get("phone").strip() == '':
         MESSAGE += "\n手机号为空"
         return
@@ -38,6 +38,7 @@ def login():
     responseJson = response.json()
     if responseJson["code"] != 200:
         msg = responseJson["msg"]
+        FAILURES_Count+=1
         print(msg)
         return
 
@@ -82,6 +83,9 @@ def getUserInfo():
         MESSAGE = responseJson["msg"]
         print(responseJson["msg"])
         if "token" in MESSAGE or "失效" in MESSAGE:
+            if FAILURES_Count >= 3:
+                print("账号或密码错误...")
+                return
             # token失效尝试重新登录
             print("token失效尝试重新登录...")
             login()
@@ -140,6 +144,9 @@ def getPlanByStu():
         MESSAGE = responseJson["msg"]
         print(responseJson["msg"])
         if "token" in MESSAGE or "失效" in MESSAGE:
+            if FAILURES_Count >= 3:
+                print("账号或密码错误...")
+                return
             # token失效尝试重新登录
             print("token失效尝试重新登录...")
             login()
