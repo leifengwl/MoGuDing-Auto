@@ -83,6 +83,7 @@ WEB版基于Pear-Admin-Boot编写
   {
     "phone": "你的手机号", # 账号
     "password": "你的密码", # 密码
+    "device": "Android", # 设备  Android或者iOS
     "token": "123", #抓包获取token，在请求头中为 authorization
     "country": "中国", # 国家
     "province": "江西省", # 省份
@@ -102,6 +103,7 @@ WEB版基于Pear-Admin-Boot编写
   {
     "phone": "你的手机号", # 账号
     "password": "你的密码", # 密码
+    "device": "Android", # 设备  Android或者iOS
     "token": "", #抓包获取token，在请求头中为 authorization，不会抓包请留空，不要删除
     "country": "中国", # 国家
     "province": "江西省", # 省份
@@ -113,6 +115,7 @@ WEB版基于Pear-Admin-Boot编写
   {
     "phone": "你的手机号", # 账号
     "password": "你的密码", # 密码
+    "device": "Android", # 设备  Android或者iOS
     "token": "123", #抓包获取token，在请求头中为 authorization
     "country": "中国", # 国家
     "province": "江西省", # 省份
