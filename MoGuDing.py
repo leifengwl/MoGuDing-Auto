@@ -196,7 +196,7 @@ def signIn(type):
         "userId": INFORMATION["userId"],
         "moguNo": INFORMATION["moguNo"],
         "address": INFORMATION["address"],
-        "device": "Android",
+        "device": INFORMATION.get("device","Android"),
         "planId": INFORMATION["planId"],
         "type": typeStr,
         "latitude": INFORMATION["latitude"],
@@ -215,7 +215,7 @@ def signIn(type):
         "description": "",
         "planId": INFORMATION["planId"],
         "type": typeStr,
-        "device": "Android",
+        "device": INFORMATION.get("device","Android"),
         "longitude": INFORMATION["longitude"]
     }
 
