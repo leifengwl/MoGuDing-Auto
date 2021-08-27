@@ -7,23 +7,6 @@ MoGuDing-Auto
 
 ## 项目简介
 
-WEB版本：[点击进入](http://www.lftools.ltd/) 
-
-蘑菇丁每日上下班打卡，支持多账户，指定地区，后续将添加日报周报等功能
-
-## WEB版展示
-WEB版基于Pear-Admin-Boot编写
-
-<img src="docs/IMG/web1.png" style="zoom:33%;" />
-<img src="docs/IMG/web2.png" style="zoom:33%;" />
-<img src="docs/IMG/web3.png" style="zoom:33%;" />
-<img src="docs/IMG/web4.png" style="zoom:33%;" />
-<img src="docs/IMG/web5.png" style="zoom:33%;" />
-<img src="docs/IMG/web6.png" style="zoom:33%;" />
-
-微信交流群:
-
-<img src="https://img02.sogoucdn.com/app/a/100540022/2021082514141868894729.png" style="zoom:33%;" />
 
 
 
