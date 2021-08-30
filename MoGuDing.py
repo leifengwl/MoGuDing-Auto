@@ -214,7 +214,7 @@ def signIn(type):
     GlobalVariable.headers.update({"authorization": INFORMATION.get("token"), "rolekey": "student", "sign": sign})
 
     requestsBody = {
-        "country": INFORMATION["country"],
+        "country": INFORMATION["country"]
         "address": INFORMATION["address"],
         "province": INFORMATION["province"],
         "city": INFORMATION["city"],
