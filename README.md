@@ -23,7 +23,7 @@ WEB版基于Pear-Admin-Boot编写
 
 微信交流群:
 
-<img src="https://img14.360buyimg.com/ddimg/jfs/t1/204524/5/4225/177487/612f5d77Ec693fa91/431470d5d296dd52.jpg" style="zoom:33%;" />
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/201870/16/5638/173507/6138b1a1E39d27fb4/449af85e750378ce.jpg" style="zoom:33%;" />
 
 
 
