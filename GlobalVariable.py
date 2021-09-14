@@ -8,7 +8,7 @@ SIGN_URL = "http://mgd.lftools.ltd:2658/api/"
 headers = {
         "Host": "api.moguding.net:9000",
         "accept-language": "zh-CN,zh;q=0.8",
-        "user-agent": "Mozilla/5.0 (Linux; U; Android 9; zh-cn; MI 6 Build/PKQ1.190118.001) AppleWebKit/533.1 (KHTML, like Gecko) Version/5.0 Mobile Safari/533.1",
+        "user-agent": "Mozilla/5.0 (Linux; Android 7.0; HTC M9e Build/EZG0TF) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.1566.54 Mobile Safari/537.36",
         "sign": "",
         "authorization": "",
         "rolekey": "",
