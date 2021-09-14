@@ -134,7 +134,7 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
 4. 修改为本地可执行版本 可在有Python3的环境中运行，添加自动任务即可
 
 ```bash
-10 6,18 * * * 0-7    python3 /opt/mogu/MoGuDing.py >> /opt/mogu/pu.log # Linux 计划任务 
+10 6,18 * * * 0-7    python3 绝对路径/MoGuDing.py >> /opt/mogu/pu.log # Linux 计划任务 
 ```
 
 
