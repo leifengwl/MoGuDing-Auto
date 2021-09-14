@@ -1,4 +1,5 @@
 import datetime
+import time
 import json
 import pytz
 import requests
@@ -8,7 +9,8 @@ import GlobalVariable
 
 urllib3.disable_warnings()
 
-INFORMATION = {}
+web_url = "https://oapi.dingtalk.com/robot/send?access_token=******************************(token)"
+
 MESSAGE = ""
 TITLE = ""
 UPDATE_INFO = ""
@@ -184,6 +186,44 @@ def getSign(url,parameter):
         MESSAGE += "\nAPI访问出错！"
 
 
+def ding_push_message(phone,titles,messages):
+    #iphon = 19943466021
+    ding_data = {}
+    ding_data['msgtype'] = 'markdown'
+
+    markdown = {}
+    markdown['title'] = "蘑菇钉提醒"
+    markdown[
+        'text'] = "#### 签到提醒:@{0} \n {1} \n  \n {2} ".format(phone,TITLE,MESSAGE)
+
+    ding_data['markdown'] = markdown
+    ding_data['at'] = {"atMobiles": [phone], "isAtAll": False}
+
+    # 构建请求头部
+    header = {
+        "Content-Type": "application/json",
+        "Charset": "UTF-8"
+    }
+
+    # 构建请求数据
+    """
+    message = {
+        "msgtype": "text",
+        "text": {
+            "content": msg
+        },
+        "at": {
+            "isAtAll": False
+        }
+    }"""
+    # 对请求的数据进行json封装
+    #message_json = json.dumps(message)
+    # 发送请求
+    #info = requests.post(url=web_url, data=message_json, headers=header)
+    info = requests.post(url=web_url, data=json.dumps(ding_data), headers=header)
+    # 打印返回的结果
+    print(info.text)
+
 # 上下班打卡签到
 def signIn(type):
     global TITLE, MESSAGE
@@ -268,16 +308,32 @@ def checkForUpdates():
 # 主程序
 def main():
     global INFORMATION, TITLE, MESSAGE
-    if GlobalVariable.PERSONAL_INFORMATION is None or GlobalVariable.PERSONAL_INFORMATION.strip() == '':
-        print("未获取到环境变量'PERSONAL_INFORMATION'，执行中止")
-        return
+#    pw = open('MoGuDing.json','r',encoding='utf8')
+#    personal_information  = pw
+#    pw.close
+#    print(personal_information)
+#    if GlobalVariable.PERSONAL_INFORMATION is None or GlobalVariable.PERSONAL_INFORMATION.strip() == '':
+#    print("未获取到环境变量'PERSONAL_INFORMATION'，执行中止")
+      #  return
 
-    personal_information = GlobalVariable.PERSONAL_INFORMATION
-
+#    personal_information = GlobalVariable.PERSONAL_INFORMATION
     # 检查更新
     checkForUpdates()
+#    informations = json.loads(personal_information)
+    informations = [
+    {
+        "phone":"手机号",
+        "password":"密码",
+        "token":"",
+        "country":"中国",
+        "province":"北京",
+        "city":"丰台区",
+        "address":"具体地址",
+        "latitude":"39.939043",
+        "longitude":"116.333059"
+    }
+    ]
 
-    informations = json.loads(personal_information)
     for information in informations:
         INFORMATION = information
 
@@ -289,27 +345,30 @@ def main():
         #9点前为上班打卡   1为上班   0为下班
         if hourNow <= 9:
             signIn(1)
+            print(TITLE+"\n"+MESSAGE+"\n"+"=====================")
         # 17点后为下班打卡
         elif hourNow >= 17:
             signIn(0)
-            # report()
+            print(TITLE+"\n"+MESSAGE+"\n"+"=====================")
 
         MESSAGE = UPDATE_INFO + MESSAGE
 
         # 开始推送
         if TITLE == "":
             TITLE = "%s,打卡失败!" % (INFORMATION["nikeName"])
-        NoticePush.server_push(TITLE, MESSAGE)
-        NoticePush.push_plus(TITLE, MESSAGE)
-        NoticePush.telegram_bot(TITLE, MESSAGE)
-        NoticePush.bark(TITLE, MESSAGE)
-        NoticePush.enterprise_wechat(TITLE, MESSAGE)
-
+        #NoticePush.server_push(TITLE, MESSAGE)
+        #NoticePush.push_plus(TITLE, MESSAGE)
+        #NoticePush.telegram_bot(TITLE, MESSAGE)
+        #NoticePush.bark(TITLE, MESSAGE)
+        #NoticePush.enterprise_wechat(TITLE, MESSAGE)
+        #msg = 
+        ding_push_message(INFORMATION["phone"],TITLE,MESSAGE)
         # 清空变量
         INFORMATION = {}
         MESSAGE = ""
         TITLE = ""
-
+        time.sleep(5)
+    print("=================================")
 
 if __name__ == '__main__':
     main()
