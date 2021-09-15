@@ -288,7 +288,7 @@ def main():
             return
 
     # 检查更新
-#     checkForUpdates()
+    checkForUpdates()
     informations = json.loads(personal_information)
     for information in informations:
         INFORMATION = information
