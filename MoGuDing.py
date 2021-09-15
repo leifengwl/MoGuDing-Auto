@@ -1,22 +1,25 @@
 import datetime
 import json
+import sys
 import pytz
 import requests
 import urllib3
 import NoticePush
 import GlobalVariable
+import os
 
 urllib3.disable_warnings()
+pwd = os.path.dirname(os.path.abspath(__file__)) + os.sep
 
 INFORMATION = {}
 MESSAGE = ""
 TITLE = ""
 UPDATE_INFO = ""
-FAILURES_Count = 0
+FAILURES_COUNT = 0
 
 # 登录
 def login():
-    global MESSAGE,FAILURES_Count
+    global MESSAGE,FAILURES_COUNT
     if INFORMATION.get("phone") is None or INFORMATION.get("phone").strip() == '':
         MESSAGE += "\n手机号为空"
         return
@@ -28,7 +31,7 @@ def login():
     requestsBody = {
         "phone": INFORMATION["phone"],
         "password": INFORMATION["password"],
-        "loginType": INFORMATION.get("device","android"),
+        "loginType": "android",
         "uuid": ""
     }
 
@@ -38,7 +41,7 @@ def login():
     responseJson = response.json()
     if responseJson["code"] != 200:
         msg = responseJson["msg"]
-        FAILURES_Count+=1
+        FAILURES_COUNT+=1
         print(msg)
         return
 
@@ -83,9 +86,9 @@ def getUserInfo():
         MESSAGE = responseJson["msg"]
         print(responseJson["msg"])
         if "token" in MESSAGE or "失效" in MESSAGE:
-            if FAILURES_Count >= 3:
+            if FAILURES_COUNT >= 3:
                 print("账号或密码错误...")
-                return
+                sys.exit(0)
             # token失效尝试重新登录
             print("token失效尝试重新登录...")
             login()
@@ -117,6 +120,8 @@ def getPlanByStu():
         # 获取基本信息
         getUserInfo()
 
+
+
     # 获取sign
     paramString = ""
     parameterSign = {
@@ -144,7 +149,7 @@ def getPlanByStu():
         MESSAGE = responseJson["msg"]
         print(responseJson["msg"])
         if "token" in MESSAGE or "失效" in MESSAGE:
-            if FAILURES_Count >= 3:
+            if FAILURES_COUNT >= 3:
                 print("账号或密码错误...")
                 return
             # token失效尝试重新登录
@@ -268,21 +273,27 @@ def checkForUpdates():
 # 主程序
 def main():
     global INFORMATION, TITLE, MESSAGE
-    if GlobalVariable.PERSONAL_INFORMATION is None or GlobalVariable.PERSONAL_INFORMATION.strip() == '':
-        print("未获取到环境变量'PERSONAL_INFORMATION'，执行中止")
-        return
 
     personal_information = GlobalVariable.PERSONAL_INFORMATION
 
-    # 检查更新
-    checkForUpdates()
+    if GlobalVariable.PERSONAL_INFORMATION is None or GlobalVariable.PERSONAL_INFORMATION.strip() == '':
+        print("未获取到环境变量'PERSONAL_INFORMATION'，使用配置文件")
+        if os.path.exists(pwd + "information.json"):
+            with open(pwd + "information.json", encoding="utf-8") as f:
+                lines = f.readlines()
+                for line in lines:
+                    personal_information += (line.strip('\n').strip(" "))
+        else:
+            print("配置文件不存在，运行结束")
+            return
 
+    # 检查更新
+#     checkForUpdates()
     informations = json.loads(personal_information)
     for information in informations:
         INFORMATION = information
 
         # 开始签到
-        # login()
         getPlanByStu()
 
         hourNow = datetime.datetime.now(pytz.timezone('PRC')).hour
@@ -294,11 +305,28 @@ def main():
             signIn(0)
             # report()
 
-        MESSAGE = UPDATE_INFO + MESSAGE
 
-        # 开始推送
+        # 开始内容
+        MESSAGE = UPDATE_INFO + MESSAGE
         if TITLE == "":
             TITLE = "%s,打卡失败!" % (INFORMATION["nikeName"])
+
+
+        # 设置推送变量
+        GlobalVariable.SERVERPUSHKEY = INFORMATION.get("SERVERPUSHKEY", "")
+        GlobalVariable.TG_BOT_TOKEN = INFORMATION.get("TG_BOT_TOKEN", "")
+        GlobalVariable.TG_USER_ID = INFORMATION.get("TG_USER_ID", "")
+        GlobalVariable.BARK = INFORMATION.get("BARK", "")
+        GlobalVariable.PUSHPLUS = INFORMATION.get("PUSHPLUS", "")
+        GlobalVariable.ACCESSTOKEN = INFORMATION.get("ACCESSTOKEN","")
+        GlobalVariable.CORPID = INFORMATION.get("CORPID", "")
+        GlobalVariable.CORPSECRET = INFORMATION.get("CORPSECRET", "")
+        GlobalVariable.TOUSER = INFORMATION.get("TOUSER", "")
+        GlobalVariable.AGENTID = INFORMATION.get("AGENTID", "")
+        GlobalVariable.THUMB_MEDIA_ID = INFORMATION.get("THUMB_MEDIA_ID", "")
+        GlobalVariable.AUTHOR = INFORMATION.get("AUTHOR", "")
+
+        # 推送信息
         NoticePush.server_push(TITLE, MESSAGE)
         NoticePush.push_plus(TITLE, MESSAGE)
         NoticePush.telegram_bot(TITLE, MESSAGE)
