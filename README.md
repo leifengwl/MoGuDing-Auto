@@ -78,10 +78,13 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
 | TOUSER               | touser指定接收消息的成员  默认为“@all”                       | 非必填   |
 | AGENTID              | agentid企业应用的id                                          | 非必填   |
 | THUMB_MEDIA_ID       | 企业微信素材库图片id                                         | 非必填   |
-| AUTHOR               | 企业微信文章作者名字                                         | 非必填   |
 
 ***PERSONAL_INFORMATION***     变量填写例子：
 注意！这个必填的变量值为一个json形式:
+
+使用时请删除注释！！！
+
+使用时请删除注释！！！
 
 使用时请删除注释！！！
 
@@ -99,7 +102,18 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
     "city": "萍乡市", # 城市  
     "address": "中国江西省萍乡市芦溪县东南边境", # 详细地址
     "latitude": "27.467943", # 纬度
-    "longitude": "114.17542" # 经度
+    "longitude": "114.17542", # 经度
+    "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" # 企业微信素材库图片id
   }
   
 ]
@@ -119,7 +133,18 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
     "city": "萍乡市", # 城市  
     "address": "中国江西省萍乡市芦溪县东南边境", # 详细地址
     "latitude": "27.467943", # 纬度
-    "longitude": "114.17542" # 经度
+    "longitude": "114.17542", # 经度
+    "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" # 企业微信素材库图片id
   },
   {
     "phone": "你的手机号", # 账号
@@ -131,7 +156,18 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
     "city": "萍乡市", # 城市  
     "address": "中国江西省萍乡市芦溪县东南边境", # 详细地址
     "latitude": "27.467943", # 纬度
-    "longitude": "114.17542" # 经度
+    "longitude": "114.17542", # 经度
+     "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" # 企业微信素材库图片id
   }
   
 ]
