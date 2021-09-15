@@ -18,7 +18,7 @@ headers = {
 }
 
 # 当前版本
-version = "20210826"
+version = "20210915"
 
 # 环境变量
 PERSONAL_INFORMATION = os.environ.get("PERSONAL_INFORMATION",'')
