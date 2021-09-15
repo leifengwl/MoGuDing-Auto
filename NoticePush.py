@@ -106,7 +106,7 @@ def enterprise_wechat(title, content):
                     {
                     "title" : title,
                     "thumb_media_id" : GlobalVariable.THUMB_MEDIA_ID ,
-                    "author" : GlobalVariable.AUTHOR ,
+                    "author" : "leifengwl" ,
                     "content_source_url": "",
                     "content" : html,
                     "digest": content
