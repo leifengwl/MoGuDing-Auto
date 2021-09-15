@@ -88,6 +88,8 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
 
 使用时请删除注释！！！
 
+如果使用是本地文件配置方式，请将下方配置填写到“information.json”文件中
+
 一个账户：
 
 ```json
