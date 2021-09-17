@@ -23,7 +23,7 @@ WEB版本：[点击进入](http://www.mgdauto.ml/)
 
 微信交流群:
 
-<img src="https://img14.360buyimg.com/ddimg/jfs/t1/201870/16/5638/173507/6138b1a1E39d27fb4/449af85e750378ce.jpg" style="zoom:33%;" />
+<img src="http://pay.lftools.ltd/res/images/wx.jpg" style="zoom:33%;" />
 
 ## 项目功能
 
