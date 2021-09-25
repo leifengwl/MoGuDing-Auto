@@ -9,8 +9,8 @@ MoGuDing-Auto
 蘑菇丁X工学云每日上下班打卡，支持多账户，指定地区，多种推送方式
 
 
-WEB版本：[点击进入](http://www.mgdauto.ml/) 
-
+WEB版本：[点击进入](https://www.mgdauto.cn/) 
+备用网址：[点击进入](https://www.mgd.gay/) 
 
 目前WEB版已支持每日上下班打卡，日周月报，支持多账户，指定地区，多种推送方式
 
