@@ -121,7 +121,11 @@ def enterprise_wechat(title, content):
             print("企业微信应用消息推送成功!")
         else:
             print("企业微信应用消息失败!错误信息:"  + errmsg)
+# 钉钉推送          
 def ding_push_message(phone,titles,messages):
+    if not GlobalVariable.DING_PUSH_TOKEN :
+        print("钉钉推送的DING_PUSH_TOKEN未设置!!")
+        return
     phone = phone
     titles = titles
     messages = messages
@@ -154,6 +158,6 @@ def ding_push_message(phone,titles,messages):
         }
     }"""
 
-    info = requests.post(url=GlobalVariable.web_url, data=json.dumps(ding_data), headers=header)
+    info = requests.post(url=GlobalVariable.DING_PUSH_TOKEN, data=json.dumps(ding_data), headers=header)
     # 打印返回的结果
     print(info.text+"\n=================================")

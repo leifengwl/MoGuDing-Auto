@@ -78,7 +78,7 @@ WEB版本：[点击进入](https://sensorflow.me/login/)
 | TOUSER               | touser指定接收消息的成员  默认为“@all”                       | 非必填   |
 | AGENTID              | agentid企业应用的id                                          | 非必填   |
 | THUMB_MEDIA_ID       | 企业微信素材库图片id                                         | 非必填   |
-
+| DING_PUSH_TOKEN      | 钉钉机器人的WebHook(添加关键词“签到”)                         | 非必填|
 ***PERSONAL_INFORMATION***     变量填写例子：
 注意！这个必填的变量值为一个json形式:
 
@@ -115,7 +115,8 @@ WEB版本：[点击进入](https://sensorflow.me/login/)
     "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
     "TOUSER": "", # touser指定接收消息的成员  默认为全部
     "AGENTID": "", # agentid企业应用的id
-    "THUMB_MEDIA_ID": "" # 企业微信素材库图片id
+    "THUMB_MEDIA_ID": "" ,# 企业微信素材库图片id
+    "DING_PUSH_TOKEN": ""
   }
   
 ]
