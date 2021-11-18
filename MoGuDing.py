@@ -332,6 +332,7 @@ def main():
         NoticePush.telegram_bot(TITLE, MESSAGE)
         NoticePush.bark(TITLE, MESSAGE)
         NoticePush.enterprise_wechat(TITLE, MESSAGE)
+        NoticePush.ding_push_message(INFORMATION["phone"],TITLE,MESSAGE)
 
         # 清空变量
         INFORMATION = {}

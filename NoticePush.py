@@ -121,3 +121,39 @@ def enterprise_wechat(title, content):
             print("企业微信应用消息推送成功!")
         else:
             print("企业微信应用消息失败!错误信息:"  + errmsg)
+def ding_push_message(phone,titles,messages):
+    phone = phone
+    titles = titles
+    messages = messages
+    ding_data = {}
+    ding_data['msgtype'] = 'markdown'
+
+    markdown = {}
+    markdown['title'] = "蘑菇钉提醒"
+    markdown[
+        'text'] = "#### 签到提醒:@{0} \n {1} \n  \n {2} ".format(phone,titles,messages)
+
+    ding_data['markdown'] = markdown
+    ding_data['at'] = {"atMobiles": [phone], "isAtAll": False}
+
+    # 构建请求头部
+    header = {
+        "Content-Type": "application/json",
+        "Charset": "UTF-8"
+    }
+
+    # 构建请求数据
+    """
+    message = {
+        "msgtype": "text",
+        "text": {
+            "content": msg
+        },
+        "at": {
+            "isAtAll": False
+        }
+    }"""
+
+    info = requests.post(url=GlobalVariable.web_url, data=json.dumps(ding_data), headers=header)
+    # 打印返回的结果
+    print(info.text+"\n=================================")
