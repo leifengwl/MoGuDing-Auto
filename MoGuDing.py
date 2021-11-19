@@ -325,6 +325,8 @@ def main():
         GlobalVariable.AGENTID = INFORMATION.get("AGENTID", "")
         GlobalVariable.THUMB_MEDIA_ID = INFORMATION.get("THUMB_MEDIA_ID", "")
         GlobalVariable.AUTHOR = INFORMATION.get("AUTHOR", "")
+        GlobalVariable.DING_PUSH_TOKEN = INFORMATION.get("DING_PUSH_TOKEN", "")
+
 
         # 推送信息
         NoticePush.server_push(TITLE, MESSAGE)
@@ -332,6 +334,7 @@ def main():
         NoticePush.telegram_bot(TITLE, MESSAGE)
         NoticePush.bark(TITLE, MESSAGE)
         NoticePush.enterprise_wechat(TITLE, MESSAGE)
+        NoticePush.ding_push_message(INFORMATION["phone"],TITLE,MESSAGE)
 
         # 清空变量
         INFORMATION = {}

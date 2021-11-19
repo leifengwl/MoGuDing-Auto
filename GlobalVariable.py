@@ -35,5 +35,5 @@ TOUSER = os.environ.get("TOUSER", "")  # touser指定接收消息的成员  默�
 AGENTID = os.environ.get("AGENTID", "")  # agentid企业应用的id
 THUMB_MEDIA_ID = os.environ.get("THUMB_MEDIA_ID", "") #企业微信素材库图片id
 AUTHOR = os.environ.get("AUTHOR", "") #企业微信文章作者
-
+DING_PUSH_TOKEN = os.environ.get("DING_PUSH_TOKEN","") #钉钉机器人推送设置
 
