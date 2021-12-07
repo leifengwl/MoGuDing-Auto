@@ -5,57 +5,6 @@ MoGuDing-Auto
 </div>
 
 
-## 项目简介
-蘑菇丁X工学云每日上下班打卡，支持多账户，指定地区，多种推送方式
-
-
-WEB版本：[点击进入](https://sensorflow.me/login/) 
-备用网址：[点击进入](https://www.mgd.gay/login) 
-
-目前WEB版已支持每日上下班打卡，日周月报，支持多账户，指定地区，多种推送方式
-
-
-请不要使用本开源程序在服务器上跑(包括GitHub的Actions)！！！
-
-请不要使用本开源程序在服务器上跑(包括GitHub的Actions)！！！
-
-请不要使用本开源程序在服务器上跑(包括GitHub的Actions)！！！
-
-微信交流群:
-
-<img src="http://pay.sensorflow.me/res/images/wx.jpg" style="zoom:33%;" />
-
-## 项目功能
-
-***当前版本:  20210915***
-
-1. 定时上下班自动打卡
-2. 支持指定地区
-3. 支持多用户
-4. 支持多种推送方式
-5. 支持自定义设备
-6. 支持本地文件配置
-
-
-## 更新日志
-### 2021-09-15:
-
-1. 支持本地文件配置
-2. 账号单独推送
-
-### 2021-08-26:
-
-1. 自定义设备
-2. 修复死循环
-
-### 2021-08-01:
-
-1. 定时上下班自动打卡
-2. 支持指定地区
-3. 支持多用户
-
-
-
 ## 使用说明
 
 ### Actions 方式
@@ -230,13 +179,4 @@ WEB版本：[点击进入](https://sensorflow.me/login/)
 4. 推送效果展示
    <img src="docs/IMG/ysxg1.jpg" style="zoom:33%;" />
    
-   
-## WEB版展示
-WEB版基于Pear-Admin-Boot编写
-
-<img src="docs/IMG/web1.png" style="zoom:33%;" />
-<img src="docs/IMG/web2.png" style="zoom:33%;" />
-<img src="docs/IMG/web3.png" style="zoom:33%;" />
-<img src="docs/IMG/web4.png" style="zoom:33%;" />
-<img src="docs/IMG/web5.png" style="zoom:33%;" />
-<img src="docs/IMG/web6.png" style="zoom:33%;" />
+ 
