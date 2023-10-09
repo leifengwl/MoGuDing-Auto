@@ -9,7 +9,7 @@ MoGuDing-Auto
 蘑菇丁X工学云每日上下班打卡，支持多账户，指定地区，多种推送方式
 
 
-WEB版本：[点击进入](https://mgd.xn--lmqs60m.cc/)
+WEB版本：[点击进入](https://auto.xn--lmqs60m.cc/)
 
 备用网址：[点击进入](https://auto.taoyun.cloud/)
 
