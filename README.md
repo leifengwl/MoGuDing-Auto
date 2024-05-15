@@ -11,7 +11,7 @@ MoGuDing-Auto
 
 WEB版本：[点击进入](https://auto.xn--lmqs60m.cc/)
 
-备用网址：[点击进入](https://auto.taoyun.cloud/)
+备用网址：[点击进入](http://auto.taskauto.me/)
 
 目前WEB版已支持工学云,蘑菇丁,习讯云,习讯宁夏,黔职通,校友邦,职校家园,实习备案,慧职教
 
