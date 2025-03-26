@@ -1,0 +1,27 @@
+[
+  {
+    "phone": "12364221020430127", # 账号
+    "password": "WQNMlgb143.", # 密码
+    "device": "iOS", # 设备  Android或者iOS
+    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM2NDIyMTAyMDQzMDEyNyIsImV4cCI6MTczMzQ3MzAwNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3QifQ.NMfbH8WEjFeh7HJZGa0a3geDSjjIVaSDBiLr6sO-V0I", #抓包获取token，在请求头中为 authorization
+    "country": "中国", # 国家
+    "province": "广西壮族自治区", # 省份
+    "city": "南宁市", # 城市  
+    "address": "广西壮族自治区南宁市兴宁区朝阳路66号", # 详细地址
+    "latitude": "22.817870", # 纬度
+    "longitude": "108.321128", # 经度
+    "SERVERPUSHKEY": "SCT113612THiDVIITJwmP5rLhXGDf5FmpP", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" ,# 企业微信素材库图片id
+    "DING_PUSH_TOKEN": "" # 钉钉机器人推送webhook
+  }
+  
+]
