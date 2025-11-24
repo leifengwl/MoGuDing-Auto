@@ -1,0 +1,27 @@
+[
+  {
+    "phone": "19606906588", # 账号
+    "password": "Aasd123456", # 密码
+    "device": "Android", # 设备  Android或者iOS
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJtb2d1ZGluZy11c2VyIiwic3ViIjoie1wibG9naW5UeXBlXCI6XCJ3ZWJcIixcInVzZXJJZFwiOjEwNzc5MDQ2NX0iLCJhdWQiOiJtb2d1ZGluZyIsImV4cCI6MjA3OTYwOTY2NSwibmJmIjoxNzYzOTg5NTY1LCJpYXQiOjE3NjM5OTA0NjV9.Gcto8OH7TssqxvHFHBIjNVrODuFhaO_7YBK4nUTYF2iW-DWV3o-OiCDfDISK7-Vlr_pxhM30erVUBMMYDGIIwQ", #抓包获取token，在请求头中为 authorization
+    "country": "中国", # 国家
+    "province": "云南省", # 省份
+    "city": "普洱市", # 城市  
+    "address": "中国云南省普洱市景谷傣族彝族自治县林业和草原局", # 详细地址
+    "latitude": "23.501036999999993", # 纬度
+    "longitude": "100.706685", # 经度
+    "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" ,# 企业微信素材库图片id
+    "DING_PUSH_TOKEN": "" # 钉钉机器人推送webhook
+  }
+  
+]
